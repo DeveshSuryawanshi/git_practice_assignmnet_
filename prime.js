@@ -1,14 +1,13 @@
 function checkPrime(num){
-    for(let i=0; i<num; i++){
-        console.log(num);
+    let count = 0;
+    for(let i=2; i <= num / 2; i++){
+        if(num % i == 0)
+        {
+            count++;
+        }
     }
-
-    if(count == 2){
-        console.log("Yes");
-    }else{
-        console.log("No");
-    }    
+    return count == 0;    
 }
 
-let num = 7; 
-checkPrime(num);
+let num1 = checkPrime(num);
+console.log(num1)
